@@ -6,7 +6,7 @@ router
   .route("/:id")
   .get(gameController.getGame)
   .delete(gameController.deleteGame)
-  .patch(gameController.processImages, gameController.updateGame);
+  .patch(gameController.updateGame);
 
 router
   .route("/")
