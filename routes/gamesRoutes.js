@@ -10,7 +10,19 @@ router
 
 router
   .route("/")
-  .post(gameController.createGame)
+  .post(
+    gameController.uploadImage,
+    gameController.processImages,
+    gameController.createGame
+  )
   .get(gameController.getAllGames);
+
+router
+  .route("/playground")
+  .post(
+    gameController.uploadImage,
+    gameController.processImages,
+    gameController.playground
+  );
 
 module.exports = router;

@@ -5,6 +5,7 @@ const gamesRoute = require("./routes/gamesRoutes");
 const PORT = 3000;
 
 app.use(express.json());
+app.use("/uploads", express.static("public"));
 app.use("/api/v1/games", gamesRoute);
 
 app.listen(PORT, () => {
